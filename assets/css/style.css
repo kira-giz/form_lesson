@@ -180,6 +180,23 @@
   border: 1px solid #d9d9d9;
   border-radius: 3px;
 }
+.input-area:focus {
+  background-color: #fff;
+  border-color: rgba(59, 133, 133, .4);
+  box-shadow: 0 0 0 2px rgb(1 191 189 / 10%);
+}
+.input-init {
+  /* ブラウザごとのデフォルトスタイルを無効 */
+  appearance: none;
+  /* safari */
+  -webkit-appearance: none;
+  background: transparent;
+  border: none;
+  /* 選択枠 */
+  outline: none;
+  /* ユーザーが大きさを調整できるか */
+  resize: none;
+}
 .label-title {
   display: block;
   font-size: 12px;

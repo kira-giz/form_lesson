@@ -33,11 +33,11 @@
             <div class="row name">
               <div class="is-halfWidth name-content">
                 <p class="label-title">名字 <span class="caution">※</span></p>
-                <input type="text" class="first-name input-area" required>
+                <input type="text" class="first-name input-init input-area" required>
               </div>
               <div class="is-halfWidth name-content">
                 <p class="label-title">名前 <span class="caution">※</span></p>
-                <input type="text" class="last-name input-area" required>
+                <input type="text" class="last-name input-init input-area" required>
               </div>
             </div>
 
@@ -63,7 +63,7 @@
               <p class="label-title is-fullWidth">出身</p>
               <div class="from-contents is-halfWidth">
                 <label for="come-from" class="from-content">
-                  <select name="come-from" id="come-from" class="from-select input-area">
+                  <select name="come-from" id="come-from" class="from-select input-init input-area">
                     <option value="東京">東京</option>
                     <option value="千葉">千葉</option>
                     <option value="埼玉">埼玉</option>
@@ -73,7 +73,40 @@
               </div>
             </div>
 
-            
+            <div class="row email">
+              <p class="label-title is-fullWidth">Eメール <span class="caution">※</span></p>
+              <div class="is-fullWidth">
+                <label for="email">
+                  <input type="email" name="email"  class="input-init input-area" required placeholder="ex) hoge@example.com">
+                </label>
+              </div>
+            </div>
+            <div class="row tel">
+              <p class="label-title is-fullWidth">電話番号</p>
+              <div class="is-fullWidth">
+                <label for="tel">
+                  <input type="tel" name="tel"  class="input-init input-area" placeholder="ex) 09012345678">
+                </label>
+              </div>
+            </div>
+            <div class="row pass">
+              <p class="label-title is-fullWidth">パスワード <span class="caution">※</span></p>
+              <div class="is-fullWidth">
+                <label for="pass">
+                  <input type="password" name="pass"  class="input-init input-area" required>
+                </label>
+              </div>
+            </div>
+            <div class="row re-pass">
+              <p class="label-title is-fullWidth">パスワード(確認用) <span class="caution">※</span></p>
+              <div class="is-fullWidth">
+                <label for="re-pass">
+                  <input type="password" name="re-pass"  class="input-init input-area" required>
+                </label>
+              </div>
+            </div>
+
+
             <p class="agreement">アカウントを作成することにより、<a class="link-color" href>利用規約</a>と<a class="link-color" href>プライバシーポリシー</a>に同意するものとします。</p>
           </form>
         </div>
