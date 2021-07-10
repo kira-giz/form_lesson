@@ -30,6 +30,50 @@
             <!--
               ここに続きのHTMLを書いていきましょう
             -->
+            <div class="row name">
+              <div class="is-halfWidth name-content">
+                <p class="label-title">名字 <span class="caution">※</span></p>
+                <input type="text" class="first-name input-area" required>
+              </div>
+              <div class="is-halfWidth name-content">
+                <p class="label-title">名前 <span class="caution">※</span></p>
+                <input type="text" class="last-name input-area" required>
+              </div>
+            </div>
+
+            <div class="row sex">
+              <p class="label-title is-fullWidth">性別</p>
+              <div class="sex-contents">
+                <label class="sex-content" for="male">
+                  <input type="radio" name="sex" id="male" value="male" class="sex-input">
+                  <span class="attr">男性</span>
+                </label>
+                <label class="sex-content" for="female">
+                  <input type="radio" name="sex" id="female" value="female" class="sex-input">
+                  <span class="attr">女性</span>
+                </label>
+                <label class="sex-content" for="other">
+                  <input type="radio" name="sex" id="other" value="other" class="sex-input">
+                  <span class="attr">その他</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="row from">
+              <p class="label-title is-fullWidth">出身</p>
+              <div class="from-contents is-halfWidth">
+                <label for="come-from" class="from-content">
+                  <select name="come-from" id="come-from" class="from-select input-area">
+                    <option value="東京">東京</option>
+                    <option value="千葉">千葉</option>
+                    <option value="埼玉">埼玉</option>
+                    <option value="神奈川">神奈川</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+
+            
             <p class="agreement">アカウントを作成することにより、<a class="link-color" href>利用規約</a>と<a class="link-color" href>プライバシーポリシー</a>に同意するものとします。</p>
           </form>
         </div>
