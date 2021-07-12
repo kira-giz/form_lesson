@@ -267,6 +267,22 @@
 
 
 /*--- from ---*/
+.from-content {
+  position: relative;
+  margin-top: 8px;
+}
+.from-content::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: 45%;
+  transform: rotate(45deg);
+  height: 5px;
+  width: 5px;
+  border-right: 2px solid #d9d9d9;
+  border-bottom: 2px solid #d9d9d9;
+}
 .from-select {
   outline: none;
 }
@@ -313,3 +329,15 @@
   border-bottom: 3px solid #01bfbd;
 }
 
+/*--- remarks(備考) ---*/
+.remarks .input-area {
+  height: 100px;
+}
+
+/*--- submit ---*/
+.submit-btn {
+  padding: 13px;
+  background-color: #01bfbd;
+  color: #fff;
+  border: 1px solid #01bfbd;
+}
