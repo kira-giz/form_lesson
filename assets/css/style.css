@@ -167,6 +167,19 @@
 .row:not(:first-child) {
   margin-top: 20px;
 }
+.input-init {
+  /* ブラウザごとのデフォルトスタイルを無効 */
+  -moz-appearance: none;
+       appearance: none;
+  /* safari */
+  -webkit-appearance: none;
+  background: transparent;
+  border: none;
+  /* 選択枠 */
+  outline: none;
+  /* ユーザーが大きさを調整できるか */
+  resize: none;
+}
 .input-area {
   box-sizing: border-box;
   height: 36px;
@@ -185,18 +198,6 @@
   border-color: rgba(59, 133, 133, .4);
   box-shadow: 0 0 0 2px rgb(1 191 189 / 10%);
 }
-.input-init {
-  /* ブラウザごとのデフォルトスタイルを無効 */
-  appearance: none;
-  /* safari */
-  -webkit-appearance: none;
-  background: transparent;
-  border: none;
-  /* 選択枠 */
-  outline: none;
-  /* ユーザーが大きさを調整できるか */
-  resize: none;
-}
 .label-title {
   display: block;
   font-size: 12px;
@@ -204,6 +205,10 @@
 }
 .caution {
   color: #dd4b39;
+}
+.sex input,
+.course input {
+  display: none;
 }
 
 /*--- name ---*/
@@ -218,40 +223,25 @@
 }
 
 /*--- sex ---*/
-.sex-contents {
+.sex__contents {
   display: flex;
   color: #545658;
   font-size: 16px;
   margin-top: 5px;
 }
-.sex-content {
+.sex__content {
   margin-left: 15px;
   cursor: pointer;
 }
-.sex-content:first-child {
+.sex__content:first-child {
   margin-left: 0;
 }
-.sex-input {
-  display: none;
-}
-/* radioボタンが選択された状態 */
-.sex-input:checked + .attr:after {
-  content: '';
-  position: absolute;
-  left: 4px;
-  top: 50%;
-  height: 8px;
-  width: 8px;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  background-color: #01bfbd;
-}
-.attr {
+.sex__content span {
   position: relative;
   display: inline-block;
   padding: 3px 3px 3px 20px;
 }
-.attr::before {
+.sex__content span::before {
   content: '';
   position: absolute;
   left: 0;
@@ -263,7 +253,63 @@
   border: 1px solid #d9d9d9;
   border-radius: 50%;
 }
+.sex__input:checked + span::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  height: 8px;
+  width: 8px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: #01bfbd;
+}
+
+
 /*--- from ---*/
 .from-select {
   outline: none;
 }
+
+/*--- course ---*/
+.course__contents {
+  display: flex;
+  flex-direction: column;
+}
+/* 見本ではfirst-of-typeだが、連続した値なので下記を使用 */
+.course__content {
+  margin-top: 10px;
+  color: #545658;
+  font-size: 16px;
+}
+.course__content:first-child {
+  margin-top: 5px;
+}
+/* spanにクラスをつけると見にくいのでカット */
+.course__content-text {
+  position: relative;
+  padding-left: 25px;
+}
+.course__content-text::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 15px;
+  width: 15px;
+  margin-top: -8px;
+  border: 1px solid #d9d9d9;
+}
+.course__content input:checked + .course__content-text:after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: rotate(45deg);
+  height: 16px;
+  width: 8px;
+  margin-top: -12px;
+  border-right: 3px solid #01bfbd;
+  border-bottom: 3px solid #01bfbd;
+}
+

@@ -43,18 +43,18 @@
 
             <div class="row sex">
               <p class="label-title is-fullWidth">性別</p>
-              <div class="sex-contents">
-                <label class="sex-content" for="male">
-                  <input type="radio" name="sex" id="male" value="male" class="sex-input">
-                  <span class="attr">男性</span>
+              <div class="sex__contents">
+                <label class="sex__content" for="male">
+                  <input type="radio" name="sex" id="male" value="male" class="sex__input">
+                  <span>男性</span>
                 </label>
-                <label class="sex-content" for="female">
-                  <input type="radio" name="sex" id="female" value="female" class="sex-input">
-                  <span class="attr">女性</span>
+                <label class="sex__content" for="female">
+                  <input type="radio" name="sex" id="female" value="female" class="sex__input">
+                  <span>女性</span>
                 </label>
-                <label class="sex-content" for="other">
-                  <input type="radio" name="sex" id="other" value="other" class="sex-input">
-                  <span class="attr">その他</span>
+                <label class="sex__content" for="other">
+                  <input type="radio" name="sex" id="other" value="other" class="sex__input">
+                  <span>その他</span>
                 </label>
               </div>
             </div>
@@ -106,6 +106,29 @@
               </div>
             </div>
 
+            <div class="row course">
+              <p class="label-title is-fullWidth">希望コース</p>
+              <div class="course__contents">
+                <div class="course__content">
+                  <input type="checkbox" name="course" value="frontend" id="frontend" >
+                  <label for="frontend" class="course__content-text">
+                    フロントエンド
+                  </label>
+                </div>
+                <div class="course__content">
+                  <input type="checkbox" name="course" value="backend" id="backend" >
+                  <label for="backend" class="course__content-text">
+                    バックエンド
+                  </label>
+                </div>
+                <div class="course__content">
+                  <input type="checkbox" name="course" value="application" id="application" >
+                  <label for="application" class="course__content-text">
+                    アプリ
+                  </label>
+                </div>
+              </div>
+            </div>
 
             <p class="agreement">アカウントを作成することにより、<a class="link-color" href>利用規約</a>と<a class="link-color" href>プライバシーポリシー</a>に同意するものとします。</p>
           </form>
