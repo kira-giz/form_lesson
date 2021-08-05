@@ -39,7 +39,7 @@
 
             <!-- 名前 -->
             <div class="row name">
-              <div class="is-halfWidth name-content">
+              <div class="name-content is-halfWidth">
                 <p class="label-title">名字 <span class="caution">※</span></p>
                 <input
                   type="text"
@@ -48,7 +48,7 @@
                   required
                 />
               </div>
-              <div class="is-halfWidth name-content">
+              <div class="name-content is-halfWidth">
                 <p class="label-title">名前 <span class="caution">※</span></p>
                 <input
                   type="text"
@@ -60,7 +60,7 @@
             </div>
 
             <!-- 性別 -->
-            <div class="row sex">
+            <div class="sex row">
               <p class="label-title is-fullWidth">性別</p>
               <div class="sex__contents">
                 <label class="sex__content" for="male">
@@ -69,9 +69,9 @@
                     name="sex"
                     id="male"
                     value="male"
-                    class="sex__input"
+                    class="sex__radio"
                   />
-                  <span>男性</span>
+                  <span class="radio-circle">男性</span>
                 </label>
                 <label class="sex__content" for="female">
                   <input
@@ -79,9 +79,9 @@
                     name="sex"
                     id="female"
                     value="female"
-                    class="sex__input"
+                    class="sex__radio"
                   />
-                  <span>女性</span>
+                  <span class="radio-circle">女性</span>
                 </label>
                 <label class="sex__content" for="other">
                   <input
@@ -89,17 +89,17 @@
                     name="sex"
                     id="other"
                     value="other"
-                    class="sex__input"
+                    class="sex__radio"
                   />
-                  <span>その他</span>
+                  <span class="radio-circle">その他</span>
                 </label>
               </div>
             </div>
 
             <!-- 出身 -->
-            <div class="row from">
+            <div class="from row">
               <p class="label-title is-fullWidth">出身</p>
-              <div class="from-content is-halfWidth select-area">
+              <div class="select-area from-content is-halfWidth">
                 <select
                   name="come-from"
                   id="come-from"
@@ -163,7 +163,7 @@
             </div>
 
             <!-- コース選択 -->
-            <div class="row course">
+            <div class="course row">
               <p class="label-title is-fullWidth">希望コース</p>
               <div class="course__content">
                 <input
@@ -201,7 +201,7 @@
             </div>
 
             <!-- 備考 -->
-            <div class="row remarks">
+            <div class="remarks row">
               <p class="label-title">備考</p>
               <textarea
                 name="remarks"
@@ -215,7 +215,7 @@
               <input
                 type="submit"
                 value="アカウントの作成"
-                class="input-init is-fullWidth button submit-btn"
+                class="submit-btn input-init is-fullWidth button"
               />
             </div>
 

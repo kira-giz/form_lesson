@@ -166,25 +166,20 @@
 /*--- 演習 ---*/
 
 /* 共通スタイル */
-.row {
+.row:not(:first-child) {
   margin-top: 20px;
-}
-
-.row:first-child {
-  margin-top: 0;
 }
 
 .input-init {
   /* ブラウザごとのデフォルトスタイルを無効 */
+  appearance: none;
   -moz-appearance: none;
-       appearance: none;
   /* safari */
   -webkit-appearance: none;
   background: transparent;
   border: none;
-  /* 選択枠 */
   outline: none;
-  /* ユーザーが大きさを調整できるか */
+  /* ユーザーが調整できるか */
   resize: none;
 }
 
@@ -222,6 +217,7 @@
 .course input {
   display: none;
 }
+/* --- */
 
 /*--- name part ---*/
 .name {
@@ -235,16 +231,17 @@
 .name-content:first-child {
   margin-left: 0;
 }
+/* --- */
 
 /*--- sex part ---*/
 .sex__contents {
   display: flex;
-  color: #545658;
-  font-size: 16px;
   margin-top: 5px;
 }
 
 .sex__content {
+  color: #545658;
+  font-size: 16px;
   margin-left: 15px;
   cursor: pointer;
 }
@@ -252,37 +249,39 @@
 .sex__content:first-child {
   margin-left: 0;
 }
+/* --- */
 
-.sex__content span {
+/* ラジオボタン */
+.radio-circle {
   position: relative;
   display: inline-block;
   padding: 3px 3px 3px 20px;
 }
 
-.sex__content span::before {
+.radio-circle::before,
+.radio-circle::after {
   content: '';
+  border-radius: 50%;
   position: absolute;
-  left: 0;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.radio-circle::before {
+  left: 0;
   height: 14px;
   width: 14px;
   background-color: #fbfbfb;
   border: 1px solid #d9d9d9;
-  border-radius: 50%;
 }
 
-.sex__input:checked + span::after {
-  content: '';
-  position: absolute;
+.sex__radio:checked + .radio-circle::after {
   left: 4px;
-  top: 50%;
   height: 8px;
   width: 8px;
-  transform: translateY(-50%);
-  border-radius: 50%;
   background-color: #01bfbd;
 }
+/* --- */
 
 /*--- from part ---*/
 .from-content {
@@ -312,6 +311,7 @@
   border-color: #d9d9d9;
   box-shadow: initial;
 }
+/* --- */
 
 /*--- course part ---*/
 .course__content {
@@ -329,34 +329,38 @@
   padding-left: 25px;
 }
 
-.course__content-text::before {
+.course__content-text::before,
+.course__content-text::after {
   content: '';
   position: absolute;
+}
+
+.course__content-text::before {
   left: 0;
   top: 50%;
-  height: 15px;
   width: 15px;
+  height: 15px;
   margin-top: -8px;
   border: 1px solid #d9d9d9;
 }
 
 .course__content input:checked + .course__content-text:after {
-  content: '';
-  position: absolute;
   left: 6px;
   top: 50%;
-  transform: rotate(45deg);
-  height: 16px;
   width: 8px;
+  height: 16px;
   margin-top: -12px;
+  transform: rotate(45deg);
   border-right: 3px solid #01bfbd;
   border-bottom: 3px solid #01bfbd;
 }
+/* --- */
 
 /*--- remarks(備考) part ---*/
 .remarks .input-area {
   height: 100px;
 }
+/* --- */
 
 /*--- submit part ---*/
 .submit-btn {
@@ -369,3 +373,4 @@
 .submit-btn:hover {
   background-color: #01a6a4;
 }
+/* --- */
