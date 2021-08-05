@@ -165,9 +165,13 @@
 
 /*--- 演習 ---*/
 
-/* 共通 end */
-.row:not(:first-child) {
+/* 共通スタイル */
+.row {
   margin-top: 20px;
+}
+
+.row:first-child {
+  margin-top: 0;
 }
 
 .input-init {
@@ -218,10 +222,8 @@
 .course input {
   display: none;
 }
-/* 共通スタイル end */
 
-
-/*--- name ---*/
+/*--- name part ---*/
 .name {
   display: flex;
 }
@@ -233,9 +235,8 @@
 .name-content:first-child {
   margin-left: 0;
 }
-/* name end */
 
-/*--- sex ---*/
+/*--- sex part ---*/
 .sex__contents {
   display: flex;
   color: #545658;
@@ -282,10 +283,8 @@
   border-radius: 50%;
   background-color: #01bfbd;
 }
-/* sex end */
 
-
-/*--- from ---*/
+/*--- from part ---*/
 .from-content {
   position: relative;
   margin-top: 8px;
@@ -304,29 +303,27 @@
   border-bottom: 2px solid #d9d9d9;
 }
 
-.from-select {
-  outline: none;
-}
-/* from end */
-
-
-/*--- course ---*/
-.course__contents {
-  display: flex;
-  flex-direction: column;
+.from-content .input-area {
+  margin-top: 0;
 }
 
-/* 見本ではfirst-of-typeだが、連続した値なので下記を使用 */
+.from-select:focus {
+  background-color: #fbfbfb;
+  border-color: #d9d9d9;
+  box-shadow: initial;
+}
+
+/*--- course part ---*/
 .course__content {
   margin-top: 10px;
   color: #545658;
   font-size: 16px;
 }
-.course__content:first-child {
+
+.course__content:nth-of-type(1) {
   margin-top: 5px;
 }
 
-/* spanにクラスをつけると見にくいのでカット */
 .course__content-text {
   position: relative;
   padding-left: 25px;
@@ -355,19 +352,20 @@
   border-right: 3px solid #01bfbd;
   border-bottom: 3px solid #01bfbd;
 }
-/* course end */
 
-/*--- remarks(備考) ---*/
+/*--- remarks(備考) part ---*/
 .remarks .input-area {
   height: 100px;
 }
-/* remarks end */
 
-/*--- submit ---*/
+/*--- submit part ---*/
 .submit-btn {
   padding: 13px;
   background-color: #01bfbd;
   color: #fff;
-  border: 1px solid #01bfbd;
+  border: 1px solid;
 }
-/* submit end */
+
+.submit-btn:hover {
+  background-color: #01a6a4;
+}
