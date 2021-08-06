@@ -171,10 +171,8 @@
 }
 
 .input-init {
-  /* ブラウザごとのデフォルトスタイルを無効 */
   appearance: none;
   -moz-appearance: none;
-  /* safari */
   -webkit-appearance: none;
   background: transparent;
   border: none;
@@ -199,7 +197,8 @@
 
 .input-area:focus {
   background-color: #fff;
-  border-color: rgba(59, 133, 133, .4);
+  border-color: rgba(59, 133, 133, 0.4);
+  /* 色割る濃さ */
   box-shadow: 0 0 0 2px rgb(1 191 189 / 10%);
 }
 
@@ -215,6 +214,11 @@
 .sex input,
 .course input {
   display: none;
+}
+
+.choice-font {
+  color: #545658;
+  font-size: 16px;
 }
 /* --- */
 
@@ -239,8 +243,6 @@
 }
 
 .sex__content {
-  color: #545658;
-  font-size: 16px;
   margin-left: 15px;
   cursor: pointer;
 }
@@ -313,8 +315,6 @@
 /*--- course part ---*/
 .course__content {
   margin-top: 10px;
-  color: #545658;
-  font-size: 16px;
 }
 
 .course__content:nth-of-type(1) {
