@@ -38,22 +38,22 @@
             -->
 
             <!-- 名前 -->
-            <div class="row name">
-              <div class="name-content is-halfWidth">
+            <div class="name row">
+              <div class="name__content is-halfWidth">
                 <p class="label-title">名字 <span class="caution">※</span></p>
                 <input
                   type="text"
                   class="input-init input-area"
-                  name="last-name"
+                  name="last_name"
                   required
                 />
               </div>
-              <div class="name-content is-halfWidth">
+              <div class="name__content is-halfWidth">
                 <p class="label-title">名前 <span class="caution">※</span></p>
                 <input
                   type="text"
                   class="input-init input-area"
-                  name="first-name"
+                  name="first_name"
                   required
                 />
               </div>
@@ -62,7 +62,7 @@
             <!-- 性別 -->
             <div class="sex row">
               <p class="label-title is-fullWidth">性別</p>
-              <div class="sex__contents">
+              <div class="sex__inner">
                 <label class="sex__content" for="male">
                   <input
                     type="radio"
@@ -97,9 +97,9 @@
             </div>
 
             <!-- 出身 -->
-            <div class="from row">
+            <div class="from row is-halfWidth">
               <p class="label-title is-fullWidth">出身</p>
-              <div class="select-area from-content is-halfWidth">
+              <div class="from__content">
                 <select
                   name="come-from"
                   id="come-from"
@@ -114,14 +114,14 @@
             </div>
 
             <!-- メール -->
-            <div class="row email">
+            <div class="email row">
               <p class="label-title is-fullWidth">
                 Eメール <span class="caution">※</span>
               </p>
               <input
                 type="email"
                 name="email"
-                class="input-init input-area is-fullWidth"
+                class="input-init input-area"
                 required
                 placeholder="ex) hoge@example.com"
               />
@@ -133,7 +133,7 @@
               <input
                 type="tel"
                 name="tel"
-                class="input-init input-area is-fullWidth"
+                class="input-init input-area"
                 placeholder="ex) 09012345678"
               />
             </div>
@@ -146,7 +146,7 @@
               <input
                 type="password"
                 name="pass"
-                class="input-init input-area is-fullWidth"
+                class="input-init input-area"
                 required
               />
             </div>
@@ -157,7 +157,7 @@
               <input
                 type="password"
                 name="re-pass"
-                class="input-init input-area is-fullWidth"
+                class="input-init input-area"
                 required
               />
             </div>
@@ -205,7 +205,7 @@
               <p class="label-title">備考</p>
               <textarea
                 name="remarks"
-                class="input-init input-area is-fullWidth"
+                class="input-init input-area"
                 placeholder="何かあればご記入ください"
               ></textarea>
             </div>
